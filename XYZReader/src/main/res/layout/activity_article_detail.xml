@@ -51,4 +51,18 @@
         android:layout_height="match_parent"
         android:nestedScrollingEnabled="true"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/share_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        app:rippleColor="@color/theme_primary_dark"
+
+        android:elevation="6dp"
+        android:src="@drawable/ic_share"
+
+        app:fabSize="normal"
+        app:pressedTranslationZ="12dp" />
 </android.support.design.widget.CoordinatorLayout>

@@ -127,11 +127,8 @@ public class ArticleDetailFragment extends Fragment implements
                 mTopInset = insets.top;
             }
         });
-//        collapsingToolbarLayout = (CollapsingToolbarLayout) mRootView.findViewById(R.id.collapsing_toolbar_layout_details);
+
         collapsingToolbarLayout = (CollapsingToolbarLayout) getActivity().findViewById(R.id.collapsing_toolbar_layout_details);
-//        Toolbar toolbar = (Toolbar) mRootView.findViewById(R.id.app_bar_details);
-//        ((ActionBarActivity) getActivity()).setSupportActionBar(toolbar);
-//        ((ActionBarActivity) getActivity()).getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         mScrollView = (ObservableScrollView) mRootView.findViewById(R.id.scrollview);
         mScrollView.setCallbacks(new ObservableScrollView.Callbacks() {
@@ -144,22 +141,9 @@ public class ArticleDetailFragment extends Fragment implements
             }
         });
 
-//        mPhotoView = (ImageView) mRootView.findViewById(R.id.photo);
         mPhotoView = (ImageView) getActivity().findViewById(R.id.photo);
         mPhotoContainerView = getActivity().findViewById(R.id.photo_container);
-//        mPhotoContainerView = mRootView.findViewById(R.id.photo_container);
-
         mStatusBarColorDrawable = new ColorDrawable(0);
-
-        mRootView.findViewById(R.id.share_fab).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(Intent.createChooser(ShareCompat.IntentBuilder.from(getActivity())
-                        .setType("text/plain")
-                        .setText("Some sample text")
-                        .getIntent(), getString(R.string.action_share)));
-            }
-        });
 
         bindViews();
         updateStatusBar();
